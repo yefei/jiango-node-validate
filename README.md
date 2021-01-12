@@ -15,7 +15,7 @@ const app = module.exports = require('jiango')();
 
 app.setup('@jiango/validate');
 
-app.router.post('/form');
+app.router.post('/json');
 
 app.start();
 ```
