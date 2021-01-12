@@ -1,0 +1,37 @@
+{
+  "name": "@jiango/validate",
+  "version": "1.0.0",
+  "description": "jiango validate module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "YeFei",
+    "email": "316606233@qq.com"
+  },
+  "keywords": [
+    "jiango",
+    "ajv",
+    "validate"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yefei/jiango-node-validate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yefei/jiango-node-validate/issues"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.16.0",
+    "jiango": "^1.4.8"
+  },
+  "dependencies": {
+    "debug": "^4.3.1"
+  }
+}
