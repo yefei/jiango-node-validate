@@ -4,6 +4,7 @@
   "description": "jiango validation module",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint . --max-warnings 0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
@@ -12,6 +13,7 @@
   },
   "keywords": [
     "jiango",
+    "koa",
     "ajv",
     "validate",
     "validation"
@@ -28,7 +30,6 @@
     "url": "https://github.com/yefei/jiango-node-validation/issues"
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
     "eslint": "^7.16.0"
   },
   "dependencies": {
