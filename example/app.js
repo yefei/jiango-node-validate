@@ -3,9 +3,9 @@
 process.env.DEBUG = '*';
 
 const app = module.exports = require('jiango')();
-const validateModule = require('..');
+const validation = require('..');
 
-app.setup(validateModule);
+app.setup(validation);
 
 const schema = {
   type: "object",

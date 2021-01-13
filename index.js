@@ -1,6 +1,6 @@
 'use strict';
 
-const debug = require('debug')('jiango:validate');
+const debug = require('debug')('jiango:validation');
 const Ajv = require('ajv').default;
 
 /**
@@ -10,7 +10,7 @@ const Ajv = require('ajv').default;
  * @param {number} [options.failCode=100]
  * @param {number} [options.failHttpCode]
  */
-function validate(core, options) {
+function validation(core, options) {
   options = Object.assign({
     ajv: {
       allErrors: true,
@@ -44,4 +44,4 @@ function validate(core, options) {
   core.koa.use(validateMiddleware);
 }
 
-module.exports = validate;
+module.exports = validation;

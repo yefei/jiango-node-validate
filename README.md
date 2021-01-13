@@ -1,10 +1,10 @@
-# jiango-node-validate
-jiango validate module
+# jiango-node-validation
+jiango validation module
 
 ## Quick start
 
 ```bash
-$ npm i @jiango/validate
+$ npm i @jiango/validation
 ```
 
 app.js
@@ -13,7 +13,7 @@ app.js
 
 const app = module.exports = require('jiango')();
 
-app.setup('@jiango/validate');
+app.setup('@jiango/validation');
 
 app.router.post('/json');
 
