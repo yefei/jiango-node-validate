@@ -19,6 +19,7 @@
     "validation"
   ],
   "files": [
+    "index.d.ts",
     "index.js"
   ],
   "license": "MIT",
@@ -35,6 +36,6 @@
   "dependencies": {
     "ajv": "^7.0.3",
     "debug": "^4.3.1",
-    "jiango": "^1.4.10"
+    "jiango": "^1.6.4"
   }
 }

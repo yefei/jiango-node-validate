@@ -36,7 +36,7 @@ function discoverSchemas(ajv, directory) {
  * @param {number} [options.failHttpCode]
  * @param {string[]} [options.schemaPaths]
  */
-function validation(core, options) {
+function setup(core, options) {
   options = Object.assign({
     failCode: 100,
   }, options);
@@ -74,4 +74,4 @@ function validation(core, options) {
   };
 }
 
-module.exports = validation;
+module.exports = setup;
