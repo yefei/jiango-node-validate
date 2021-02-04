@@ -1,19 +1,19 @@
-# jiango-node-validation
-jiango validation module
+# zenweb-validation
+zenweb validation module
 
 ## Quick start
 
 ```bash
-$ npm i @jiango/validation
+$ npm i @zenweb/validation
 ```
 
 app.js
 ```js
 'use strict';
 
-const app = module.exports = require('jiango')();
+const app = module.exports = require('zenweb').create();
 
-app.setup('@jiango/validation');
+app.setup('@zenweb/validation');
 
 app.router.post('/simple', ctx => {
   ctx.validate('simple'); // default data: ctx.request.body

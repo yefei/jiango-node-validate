@@ -1,7 +1,7 @@
 {
-  "name": "@jiango/validation",
-  "version": "1.0.2",
-  "description": "jiango validation module",
+  "name": "@zenweb/validation",
+  "version": "1.0.0",
+  "description": "zenweb validation module",
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --max-warnings 0",
@@ -12,7 +12,7 @@
     "email": "316606233@qq.com"
   },
   "keywords": [
-    "jiango",
+    "zenweb",
     "koa",
     "ajv",
     "validate",
@@ -25,17 +25,17 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yefei/jiango-node-validation.git"
+    "url": "git+https://github.com/yefei/zenweb-validation.git"
   },
   "bugs": {
-    "url": "https://github.com/yefei/jiango-node-validation/issues"
+    "url": "https://github.com/yefei/zenweb-validation/issues"
   },
   "devDependencies": {
-    "eslint": "^7.16.0"
+    "eslint": "^7.16.0",
+    "zenweb": "^1.0.1"
   },
   "dependencies": {
     "ajv": "^7.0.3",
-    "debug": "^4.3.1",
-    "jiango": "^1.6.4"
+    "debug": "^4.3.1"
   }
 }

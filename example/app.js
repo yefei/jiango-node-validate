@@ -2,7 +2,7 @@
 
 process.env.DEBUG = '*';
 
-const app = module.exports = require('jiango')();
+const app = module.exports = require('zenweb').create();
 const validation = require('..');
 
 app.setup(validation);

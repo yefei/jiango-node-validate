@@ -1,8 +1,8 @@
 'use strict';
 
 const path = require('path');
-const debug = require('debug')('jiango:validation');
-const { findFilesSync } = require('jiango/lib/utils');
+const debug = require('debug')('zenweb:validation');
+const { findFilesSync } = require('zenweb/lib/utils');
 const Ajv = require('ajv').default;
 
 /**
@@ -29,7 +29,7 @@ function discoverSchemas(ajv, directory) {
 }
 
 /**
- * @param {import('jiango/lib/core')} core 
+ * @param {import('zenweb').Core} core 
  * @param {object} [options]
  * @param {import('ajv').Options} [options.ajv]
  * @param {number} [options.failCode=100]
