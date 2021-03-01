@@ -14,16 +14,20 @@ app.js
 const app = module.exports = require('zenweb').create();
 
 app.setup('@zenweb/validation');
+app.start();
+```
+
+app/controller/simple.js
+```js
+const app = require('../../app');
 
 app.router.post('/simple', ctx => {
   ctx.validate('simple'); // default data: ctx.request.body
   ctx.body = 'ok';
 });
-
-app.start();
 ```
 
-validation/simple.schema.json
+app/validation/simple.schema.json
 ```json
 {
   "type": "object",

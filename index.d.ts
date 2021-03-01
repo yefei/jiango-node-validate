@@ -1,5 +1,14 @@
-/// <reference types="node" />
 import 'koa';
+import { Options } from 'ajv';
+
+export interface ValidationOptions {
+  ajv?: Options;
+  failCode?: number;
+  failHttpCode?: number;
+  schemaPaths?: string[];
+}
+
+export declare function setup(core: Core, options?: ValidationOptions): void;
 
 declare module 'koa' {
   interface BaseContext {

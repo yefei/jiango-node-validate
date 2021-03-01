@@ -2,7 +2,7 @@
 
 const path = require('path');
 const debug = require('debug')('zenweb:validation');
-const { findFilesSync } = require('zenweb/lib/utils');
+const { findFilesSync } = require('@feiye/discover');
 const Ajv = require('ajv').default;
 
 /**
@@ -25,7 +25,7 @@ function discoverSchemas(ajv, directory) {
       throw new Error(`schema error [${fullpath}]: ${e.message}`);
     }
   }
-  debug('schemas [%s] %o files', directory, count);
+  debug('discover: %s %o files', directory, count);
 }
 
 /**
@@ -38,6 +38,7 @@ function discoverSchemas(ajv, directory) {
  */
 function setup(core, options) {
   options = Object.assign({
+    schemaPaths: [path.join(process.cwd(), 'app', 'validation')],
     failCode: 100,
   }, options);
 
@@ -46,10 +47,8 @@ function setup(core, options) {
   const ajv = new Ajv(options.ajv);
 
   // load schemas
-  if (options.schemaPaths) {
+  if (options.schemaPaths && options.schemaPaths.length) {
     options.schemaPaths.forEach(d => discoverSchemas(ajv, d));
-  } else {
-    discoverSchemas(ajv, path.join(process.cwd(), 'validation'));
   }
 
   /**
@@ -74,4 +73,6 @@ function setup(core, options) {
   };
 }
 
-module.exports = setup;
+module.exports = {
+  setup,
+};
