@@ -4,7 +4,7 @@ import { Options } from 'ajv';
 export interface ValidationOptions {
   ajv?: Options;
   failCode?: number;
-  failHttpCode?: number;
+  failStatus?: number;
   schemaPaths?: string[];
 }
 

@@ -33,7 +33,7 @@ function discoverSchemas(ajv, directory) {
  * @param {object} [options]
  * @param {import('ajv').Options} [options.ajv]
  * @param {number} [options.failCode=100]
- * @param {number} [options.failHttpCode]
+ * @param {number} [options.failStatus]
  * @param {string[]} [options.schemaPaths]
  */
 function setup(core, options) {
@@ -65,7 +65,7 @@ function setup(core, options) {
     if (!validate(data || this.request.body)) {
       this.fail({
         code: options.failCode,
-        httpCode: options.failHttpCode,
+        status: options.failStatus,
         message: 'validate error',
         data: validate.errors,
       });
