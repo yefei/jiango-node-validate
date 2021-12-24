@@ -11,9 +11,10 @@ app.js
 ```js
 'use strict';
 
+const { default: validation } = require('@zenweb/validation');
 const app = module.exports = require('zenweb').create();
 
-app.setup('@zenweb/validation');
+app.setup(validation());
 app.start();
 ```
 

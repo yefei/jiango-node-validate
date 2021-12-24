@@ -3,6 +3,6 @@
 process.env.DEBUG = '*';
 
 const app = module.exports = require('zenweb').create();
-const { setup } = require('..');
-app.setup(setup);
+const { default: validation } = require('../dist/index');
+app.setup(validation());
 app.start();
